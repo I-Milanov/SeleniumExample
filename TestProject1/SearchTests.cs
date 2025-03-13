@@ -12,7 +12,9 @@ namespace WikiTestsSample
         [SetUp]
         public void SetUp()
         {
-            _driver = new ChromeDriver();
+            var chromOption = new ChromeOptions();
+            chromOption.AddArgument("--start-maximized");
+            _driver = new ChromeDriver(chromOption);
 
             WikiHomePage = new WikiHomePage(_driver);
 
