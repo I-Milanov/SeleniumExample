@@ -50,7 +50,7 @@ namespace DjovaniTests
             var expectedDay = DateTime.Today.ToString("dd.MM.yyyy");
 
             //3. Assert that date is today
-            Assert.That(expectedDay.Equals(actualCurrentDay), "test");
+            Assert.AreEqual(expectedDay, actualCurrentDay);
         }
     }
 }
