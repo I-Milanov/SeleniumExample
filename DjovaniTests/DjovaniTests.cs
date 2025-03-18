@@ -16,7 +16,12 @@ namespace DjovaniTests
         [OneTimeSetUp]
         public void OneTimeSetUp()
         {
-            _driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            // Download chrome version from here https://googlechromelabs.github.io/chrome-for-testing/#stable and unzip it
+            // Binary: Chrome; Platform: win32/64
+            options.BinaryLocation = @"C:\Users\itmil\Downloads\chrome-win64\chrome.exe";
+
+            _driver = new ChromeDriver(options);
         }
 
         [SetUp]
