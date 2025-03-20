@@ -15,7 +15,7 @@ namespace DjovaniTestsImproved.Pages
 
         protected IWebElement NavMenuButon(string navigationText) => Wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath($"//ul[contains(concat(' ',normalize-space(@class),' '),' navbar-nav ')]//a[text()='{navigationText}']")));
 
-        public IWebElement LunchNavMenuButon => NavMenuButon("Обедно Mеню");
+        public IWebElement LunchNavMenuButon => NavMenuButon("Обедно Меню");
 
         public IWebElement ForUsNavMenu => NavMenuButon("За Нас");
     }
