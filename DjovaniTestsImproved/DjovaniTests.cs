@@ -1,13 +1,15 @@
-// 1. Create Nunit Project
-// 2. Add Selenium nuget Packages (Web Driveer + Chrome driver)
-// 3. Chreate _driver field and inialize Chrome driver
-// 4. Configure OneTimeSetup, Setup and TearDown
-// 5. Create tests
-
 using DjovaniTestsImproved;
 using DjovaniTestsImproved.Pages.HomePage;
 using DjovaniTestsImproved.Pages.LunchPage;
 using OpenQA.Selenium.Chrome;
+
+// What was done:
+// 1. Create Pages with base page
+// 2. Move the code in the page
+// 3. Add wait strategies for the elements
+// 4. Create a BaseTestClass
+// 5. Move genereric logic in the BaseTestClass
+// 6. Add IJavaScriptExecutor
 
 namespace DjovaniTests
 {
