@@ -6,7 +6,7 @@ namespace DjovaniTestsImproved.Pages.LunchPage
     {
         public void AssertCurrentDayIsToday()
         {
-            CurrentDay.ScrollTo(Driver);
+            CurrentDay.ScrollTo();
             var actualCurrentDay = CurrentDay.Text;
             var expectedDay = DateTime.Today.ToString("dd.MM.yyyy");
 

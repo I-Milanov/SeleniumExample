@@ -1,6 +1,8 @@
-using DjovaniTestsImproved;
+﻿using DjovaniTestsImproved;
+using DjovaniTestsImproved.Extensions;
 using DjovaniTestsImproved.Pages.HomePage;
 using DjovaniTestsImproved.Pages.LunchPage;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 // What was done:
@@ -32,5 +34,15 @@ namespace DjovaniTests
 
             LunchPage.AssertCurrentDayIsToday();
         }
+
+        [Test]
+        public void АssertElementStyleIsCorrect()
+        {
+            Driver.Navigate().GoToUrl("https://www.selenium.dev/documentation/webdriver/elements/");
+            IWebElement element = Driver.FindElement(By.XPath("//a[@Id='m-documentationoverview']"));
+
+            element.AssertCssStyles(new ButtonStyle());          
+        }
+
     }
 }
